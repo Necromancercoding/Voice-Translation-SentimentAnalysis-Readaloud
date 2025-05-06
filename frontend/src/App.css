@@ -1,0 +1,249 @@
+/* src/App.css */
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+header p {
+  margin-top: 8px;
+  color: var(--color-text);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* Splash screen */
+.splash-screen {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--color-bg-start);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeOutSplash 1s ease forwards;
+  animation-delay: 2s;
+}
+@keyframes fadeOutSplash {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Scale down the splash image to 1/3 its size */
+.splash-image {
+  transform: scale(0.33);
+  transform-origin: center center;
+  height: auto;
+}
+
+/* (If you still have ASCII art mode enabled, you can keep this:) */
+.ascii-art {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  text-align: center;
+  white-space: pre;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.button-primary {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.button-primary:hover:not(:disabled) {
+  background: var(--color-secondary);
+  transform: translateY(-2px);
+}
+.button-primary:disabled {
+  background: #CBD5E0;
+  cursor: not-allowed;
+}
+
+/* File input as button */
+.file-label {
+  position: relative;
+  display: inline-block;
+}
+.file-label input[type="file"] {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Dropdowns */
+.select-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.select-wrapper label {
+  margin-bottom: 4px;
+  font-weight: 500;
+  color: var(--color-light);
+}
+.select-wrapper select {
+  appearance: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z' fill='white'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+.select-wrapper select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99,179,237,0.4);
+}
+
+/* Progress bar */
+.progress-container {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  background-color: #E2E8F0;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+.progress-bar-fill {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-secondary));
+  transition: width 0.3s ease;
+}
+
+/* Results */
+.results {
+  display: grid;
+  gap: 24px;
+}
+.card {
+  background: var(--color-card);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 24px;
+  transition: var(--transition);
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0,0,0,0.12);
+}
+.card h3 {
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+/* Sliders */
+.slider-wrapper {
+  margin-top: 16px;
+}
+.slider-wrapper label {
+  margin-right: 8px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+.slider-wrapper input[type="range"] {
+  vertical-align: middle;
+}
+
+/* Pie chart container */
+.pie-container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* Analytics modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* Analytics modal content */
+.modal-content {
+  background: var(--color-card);
+  padding: 24px;
+  border-radius: var(--border-radius);
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-light);
+}
+
+/* Analytics table */
+.analytics-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+.analytics-table th,
+.analytics-table td {
+  border: 1px solid #CBD5E0;
+  padding: 8px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+.analytics-table th {
+  background: var(--color-accent);
+  color: #fff;
+}

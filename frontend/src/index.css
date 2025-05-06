@@ -1,0 +1,33 @@
+:root {
+  --color-bg-start:  #f3f4f6;
+  --color-bg-end:    #e2e8f0;
+  --color-primary:   #3182ce;
+  --color-secondary: #2c5282;
+  --color-accent:    #63b3ed;
+  --color-card:      #ffffff;
+  --color-text:      #2d3748;
+  --color-light:     #718096;
+  --border-radius:   8px;
+  --transition:      0.3s ease-in-out;
+  --mouse-x:         50%;
+  --mouse-y:         50%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: radial-gradient(
+    circle at var(--mouse-x) var(--mouse-y),
+    var(--color-bg-start),
+    var(--color-bg-end)
+  );
+  background-attachment: fixed;
+  color: var(--color-text);
+  line-height: 1.6;
+  transition: background 0.1s ease;
+}
