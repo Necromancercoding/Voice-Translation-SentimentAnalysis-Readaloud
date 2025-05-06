@@ -1,0 +1,6 @@
+flask
+flask-cors
+whisper
+torch
+vaderSentiment
+deep-translator
