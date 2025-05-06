@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Voice-Translation-SentimentAnalysis-Readaloud/static/css/main.6bfeba4d.css",
+    "main.js": "/Voice-Translation-SentimentAnalysis-Readaloud/static/js/main.43571e7c.js",
+    "static/js/453.8ab44547.chunk.js": "/Voice-Translation-SentimentAnalysis-Readaloud/static/js/453.8ab44547.chunk.js",
+    "index.html": "/Voice-Translation-SentimentAnalysis-Readaloud/index.html",
+    "main.6bfeba4d.css.map": "/Voice-Translation-SentimentAnalysis-Readaloud/static/css/main.6bfeba4d.css.map",
+    "main.43571e7c.js.map": "/Voice-Translation-SentimentAnalysis-Readaloud/static/js/main.43571e7c.js.map",
+    "453.8ab44547.chunk.js.map": "/Voice-Translation-SentimentAnalysis-Readaloud/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6bfeba4d.css",
+    "static/js/main.43571e7c.js"
+  ]
+}
