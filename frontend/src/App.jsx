@@ -11,7 +11,7 @@ function Splash() {
   return (
     <div className="splash-screen">
       <img
-        src="Voice-Translation-SentimentAnalysis-Readaloud/frontend/splash.png"
+        src={`${process.env.PUBLIC_URL}/splash.png`}
         alt="Schrödinger's Monkeys Splash"
         className="splash-image"
       />
